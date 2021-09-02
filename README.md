@@ -6,14 +6,69 @@ Github : <br>
 https://github.com/Jcharis/Streamlit_DataScience_Apps
 
 ## Crash_Course.py <br>
+* warning, error, exception
+```
+st.warning("This is a warning ")
+
+st.error("This shows an error ")
+
+st.exception("NameError('name not defined')")
+```
+* 画像
+```
+from PIL import Image 
+img = Image.open("example.jpeg")
+st.image(img,width=300,caption='Streamlit Images')
+```
 * チェックボックス
+```
+if st.checkbox("Show/Hide"):
+	st.text("Showing or Hiding Widget")
+```
 * ラジオボタン
+```
+# Radio Button
+status = st.radio("What is your status",('Active','Inactive'))
+if status == 'Active':
+	st.text("Status is Active")
+else:
+	st.warning("Not Active Yet")
+```
 * セレクトボックス(1つ)
 * マルチセレクトボックス(たくさん)
+```
+# SelectBox
+occupation = st.selectbox("Your Occupation",['Data Scientist','Programmer','Doctor','Businessman'])
+st.write("You selected this option",occupation)
+
+# MultiSelect
+location = st.multiselect("Where do you stay",("London","New York","Accra","Kiev","Berlin","New Delhi"))
+st.write("You selected",len(location),"location")
+```
 * スライダー
+```
+# Slider
+salary = st.slider("What is your salary",1000,10000)
+```
 * ボタン
+```
+if st.button("******"):
+	# 処理
+```
 * テキストインプット(1行) + ボタン
 * テキストエリア (たくさん)+ ボタン
+```
+# Text Input
+name = st.text_input("Enter Name","Type Here...")
+
+# Text Area
+c_text = st.text_area("Enter Text","Type Here...")
+if st.button('Analyze'):
+    c_result = c_text.title()
+    st.success(c_result)
+else:
+    st.write("Press the above button..")
+```
 * date_input
 * time_input
 * スライドバー [st.sidebar.*****]
@@ -26,6 +81,11 @@ with st.echo():
 	import pandas as pd 
 
 	df = pd.DataFrame()
+```
+* ページ名・ページアイコンの変更
+```
+st.set_page_config(page_title = '******', page_icon=':Smiley:')
+# 画像のpathも指定することが可能
 ```
 * バッククォート [SHIFT + @]
 
@@ -57,4 +117,16 @@ https://blog.jcharistech.com/2020/07/09/simple-nlp-app-with-spacy-streamlit/ <br
 Blog : spaCy からたどる最近の日本語自然言語処理ライブラリの調査 <br>
 https://hakasenote.hnishi.com/2020/20200810-spacy-japanese-nlp/
 
+## HTML_EDA_app.py
+Youtube : How to use Pandas Profiling & Sweetviz in Streamlit with Streamlit Components Python(EDA App) <br>
+https://www.w3schools.com/howto/howto_js_slideshow.asp
 
+* CSS, JavaScriptがStreamlit内で使える
+```
+import streamlit.components.v1 as components
+footer_temp = """ CSS, JavaScript """
+components.html(footer_temp,height=500)
+```
+* W3Schools : CSS, JavaScriptの例がコピペでとってこれる <br>
+https://www.w3schools.com/howto/howto_js_slideshow.asp <br>
+Style以下をコピペ 
