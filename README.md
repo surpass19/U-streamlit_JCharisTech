@@ -1,5 +1,5 @@
 # U-streamlit_JCharisTech
-SYoutube : treamlit Python Tutorials:<br>
+Youtube : Streamlit Python Tutorials:<br>
 https://www.youtube.com/playlist?list=PLJ39kWiJXSixyRMcn3lrbv8xI8ZZoYNZU
 
 Github : <br>
