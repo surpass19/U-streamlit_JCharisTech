@@ -87,6 +87,12 @@ with st.echo():
 st.set_page_config(page_title = '******', page_icon=':Smiley:')
 # 画像のpathも指定することが可能
 ```
+* 拡張 (隠せるので, 一画面に多くの機能を配置できる)
+```
+st.expander('Movies DF',expanded=False):
+	#False → 最初は非表示
+	st.dataframe(df.head(10))
+```
 * バッククォート [SHIFT + @]
 
 ## face_detection_app <br>
@@ -130,3 +136,8 @@ components.html(footer_temp,height=500)
 * W3Schools : CSS, JavaScriptの例がコピペでとってこれる <br>
 https://www.w3schools.com/howto/howto_js_slideshow.asp <br>
 Style以下をコピペ 
+
+## read_documents_app.py
+* Documentsを読み込みまとめ
+
+## fake_data_generate_app.py
